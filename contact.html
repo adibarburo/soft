@@ -1,14 +1,204 @@
+<!DOCTYPE html>
 <html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Page</title>
+
+    <link rel="stylesheet" href="css/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
+
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,400italic,500,700,700italic,500italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <script src="js/index.js"></script>
+
+</head>
+
 <body>
-<form action="https://formspree.io/" method="POST">
-    Name:<input type="text" name="name"><br/>
-    E-mail:<input type="email" name="_replyto"><br/>
-    <br/>
-    Message:<br/>
-    <textarea type="text" name="message" placeholder='Your message'></textarea>
-    <br/>
-    <input type="text" name="_gotcha" style="display:none" />
-    <input type="submit" value="Send">
-</form>
+
+    <header id="header">
+        <div class="container">
+            <div class="logo">
+
+                <div class="navbar-brand">
+                    <a href="index.html">AdiBarbu's Software</a>
+                    <br/>
+                    <div class="description">Free & useful programs and apps.</div>
+                </div>
+
+            </div>
+
+
+            <nav id="nav">
+                <ul>
+                    <li><a href="index.html">Home</a>
+                    </li>
+                    <li><a href="about.html">About</a>
+                    </li>
+                    <li><a href="software.html">Software</a>
+                    </li>
+                    <li><a href="contact.html">Contact</a>
+                    </li>
+                    <li><a href="donate.html">Donate</a>
+                    </li>
+                </ul>
+            </nav>
+
+
+        </div>
+    </header>
+
+    <div class="wrapper">
+        <div class="container">
+
+            <div id="top-first" class="row">
+
+                <div id="location" class="col-lg-9 col-md-9 col-sm-9 col-xs-8">
+
+                    <ul class="breadcrumb">
+                        <li><a href="index.html">Home</a>
+                        </li>
+                        <li class="active">
+						<a href="contact.html">Contact</a>
+						</li>
+                    </ul>
+                </div>
+
+                <div id="share-social" class="col-lg-3 col-md-3 col-sm-3 col-xs-4">
+                    <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                    <i class="fa fa-twitter-square" aria-hidden="true"></i>
+                    <i class="fa fa-rss" aria-hidden="true"></i>
+                    | <a href="#" class="disabled">RO</a>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- /top first-->
+        <div class="container">
+            <div class="content">
+
+                <!-- Content Row -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="title">Contact</h1>
+                        <hr class="line" />
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <!-- Contact Details Column -->
+                    <div class="col-sm-3 col-sm-push-7 col-xs-6">
+                        <div class="centrare">
+                            <h3 class="title3">Developer Details</h3>
+                            <p>
+                                Adi Barbu | Romania
+                                <br>
+                            </p>
+
+                            <p><i class="fa fa-info-circle" aria-hidden="true"></i>
+                                <abbr title="Website">Blog</abbr>: <a href="www.adibarbu.ro">adibarbu.ro</a>
+                                <br/>
+                            </p>
+                            <p><i class="fa fa-envelope-o"></i> 
+                                <abbr title="Email">E</abbr>: <a href="mailto:name@example.com">dev@adibarbu.ro</a>
+                            </p>
+
+                        </div>
+                    </div>
+					
+					  <div class="col-sm-2 col-sm-push-7 col-xs-6">
+                        <div class="centrare">
+                            <h3 class="title3">Social</h3>
+                            <p>
+                              <a href="#">Facebook</a><br/>
+							  <a href="#">Twitter</a><br/>
+							  <a href="#">Google Plus</a><br/>
+                            </p>
+
+                        </div>
+                    </div>
+
+
+                    <div class="col-sm-7 col-sm-pull-5 col-xs-12">
+                        <h3 class="title3">Send me a message </h3>
+                        <form name="sentMessage" id="contactForm" method="POST" novalidate>
+                            <div class="control-group form-group">
+                                <div class="controls">
+                                    <label>Name:</label>
+                                    <input type="text" class="form-control" id="name" name="name" required data-validation-required-message="Please enter your name.">
+                                    <p class="help-block"></p>
+                                </div>
+                            </div>
+                            <div class="control-group form-group">
+                                <div class="controls">
+                                    <label>Email Address:</label>
+                                    <input type="email" class="form-control" id="email" name="_replyto" required data-validation-required-message="Please enter your email address.">
+                                </div>
+                            </div>
+                            <div class="control-group form-group">
+                                <div class="controls">
+                                    <label>Message:</label>
+                                    <textarea name="message" rows="10" cols="100" class="form-control" id="message" required data-validation-required-message="Please enter your message" maxlength="999" style="resize:none"></textarea>
+                                </div>
+                            </div>
+                            <div id="success"></div>
+                            <!-- For success/fail messages -->
+                            <button type="submit" class="btn btn-primary" value="Send" >Send Message</button>
+                        </form>
+						<script>
+    var contactform =  document.getElementById('contactform');
+    contactform.setAttribute('action', '//formspree.io/' + 'dev' + '@' + 'adibarbu' + '.' + 'ro');
+</script>
+                    </div>
+
+
+                </div>
+                <!-- /.row -->
+
+            </div>
+            <!-- /page content -->
+        </div>
+        <!-- /container  -->
+    </div> 
+	<!-- /wrapper-->
+
+    <footer>
+        <div class="container">
+            <div class="row" id="footer">
+
+                <div class="col-md-5 col-sm-5 col-xs-12" id="footer-col-links">
+                    <a href="about.html">ABOUT</a> | <a href="contact.html">CONTACT</a> | <a href="donate.html">DONATE</a>
+                </div>
+
+                <div class="col-md-7 col-sm-7 col-xs-12" id="footer-col-copy">
+                    © 2016 Adi Barbu Software. All rights reserved!
+                    <div id="footer-col-copy-links">
+                        <a href="terms-and-conditions.html">Terms and Conditions</a> | <a href="cookie-policy.html">Cookie Policy</a> | <a href="privacy-policy.html">Privacy Policy</a>
+                    </div>
+                </div>
+
+            </div>
+            <!-- /row footer-->
+        </div>
+        <!-- /container footer -->
+    </footer>
+
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-79589027-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
 </body>
 </html>
