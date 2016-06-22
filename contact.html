@@ -129,39 +129,32 @@
                         <form name="sentMessage" action="http://formspree.io/dev@adibarbu.ro" id="contactForm" method="POST" novalidate>
                             <div class="control-group form-group">
                                 <div class="controls">
-                                    <label>Name:</label>
-                                    <input type="text" class="form-control" id="name" name="name" required data-validation-required-message="Please enter your name.">
+                                    <label>Name *</label>
+                                    <input type="text" class="form-control" id="name" name="name" required data-validation-required-message="Please enter your name." placeholder="What's your name">
                                     <p class="help-block"></p>
                                 </div>
                             </div>
 							
 						 <div class="control-group form-group">
                                 <div class="controls">
-                                    <label>Subject:</label>
-                                    <input type="text" class="form-control" id="subject" name="_subject" required data-validation-required-message="Please enter the subject of the message." >
+                                    <label>Subject</label>
+                                    <input type="text" class="form-control" id="subject" name="_subject" required data-validation-required-message="Please enter the subject of the message." placeholder="Short description of the message">
                                     <p class="help-block"></p>
                                 </div>
                             </div>
 							
                             <div class="control-group form-group">
                                 <div class="controls">
-                                    <label>Email Address:</label>
-                                    <input type="email" class="form-control" id="email" name="_replyto" required data-validation-required-message="Please enter your email address.">
+                                    <label>Email *</label>
+                                    <input type="email" class="form-control" id="email" name="_replyto" required data-validation-required-message="Please enter your email address." placeholder="Where can I replay to your message">
                                 </div>
                             </div>
 							
-							<div class="control-group form-group">
-                                <div class="controls">
-                                    <label>Website:</label>
-                                    <input type="text" class="form-control" id="website" >
-                                    <p class="help-block"></p>
-                                </div>
-                            </div>
 							
                             <div class="control-group form-group">
                                 <div class="controls">
-                                    <label>Message:</label>
-                                    <textarea name="message" rows="10" cols="100" class="form-control" id="message" required data-validation-required-message="Please enter your message" maxlength="999" style="resize:none"></textarea>
+                                    <label>Message *</label>
+                                    <textarea name="message" rows="10" cols="100" class="form-control" id="message" required data-validation-required-message="Please enter your message" style="resize:none" placeholder="Your message goes here"></textarea>
                                 </div>
                             </div>
 							 <input type="hidden" name="_next" value="emailsent.html" />
