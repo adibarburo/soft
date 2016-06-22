@@ -84,7 +84,7 @@
                 <!-- Content Row -->
                 <div class="row">
                     <div class="col-md-12">
-                        <h1 class="title">Contact</h1>
+                        <h1 class="title">Contact page and details</h1>
                         <hr class="line" />
                     </div>
                 </div>
@@ -92,7 +92,7 @@
                 <div class="row">
 
                     <!-- Contact Details Column -->
-                    <div class="col-sm-3 col-sm-push-7 col-xs-6">
+                    <div class="col-md-3 col-md-push-7 col-sm-6 col-xs-12">
                         <div class="centrare">
                             <h3 class="title3">Developer Details</h3>
                             <p>
@@ -101,32 +101,32 @@
                             </p>
 
                             <p><i class="fa fa-info-circle" aria-hidden="true"></i>
-                                <abbr title="Website">Blog</abbr>: <a href="www.adibarbu.ro">adibarbu.ro</a>
+                                <abbr title="Website">Blog</abbr>:<a href="http://www.adibarbu.ro"> www.adibarbu.ro</a>
                                 <br/>
                             </p>
                             <p><i class="fa fa-envelope-o"></i> 
-                                <abbr title="Email">E</abbr>: <a href="mailto:name@example.com">dev@adibarbu.ro</a>
+                                <abbr title="Email">E</abbr>: <img src="img/arond.png" alt=""/>
                             </p>
 
                         </div>
                     </div>
 					
-					  <div class="col-sm-2 col-sm-push-7 col-xs-6">
+					  <div class="col-md-2 col-md-push-7 col-sm-6 col-xs-12" >
                         <div class="centrare">
                             <h3 class="title3">Social</h3>
                             <p>
-                              <a href="#">Facebook</a><br/>
-							  <a href="#">Twitter</a><br/>
-							  <a href="#">Google Plus</a><br/>
+                              <a href="#" target="_blank"> <i class="fa fa-facebook-official" aria-hidden="true"></i> Facebook</a><br/>
+							  <a href="https://twitter.com/adibarbusoft" target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"></i> Twitter</a><br/>
+							  <a href="https://plus.google.com/b/114107520994663720704/114107520994663720704/" target="_blank"><i class="fa fa-google-plus-square" aria-hidden="true"></i> Google Plus</a><br/>
                             </p>
 
                         </div>
                     </div>
 
 
-                    <div class="col-sm-7 col-sm-pull-5 col-xs-12">
-                        <h3 class="title3">Send me a message </h3>
-                        <form name="sentMessage" action="" id="contactForm" method="POST" novalidate>
+                    <div class="col-md-7 col-md-pull-5 col-sm-12 col-xs-12">
+                        <h3 class="title3">Send me an email - I will answer your request as soon as possible.</h3>
+                        <form name="sentMessage" action="http://formspree.io/dev@adibarbu.ro" id="contactForm" method="POST" novalidate>
                             <div class="control-group form-group">
                                 <div class="controls">
                                     <label>Name:</label>
@@ -134,26 +134,44 @@
                                     <p class="help-block"></p>
                                 </div>
                             </div>
+							
+						 <div class="control-group form-group">
+                                <div class="controls">
+                                    <label>Subject:</label>
+                                    <input type="text" class="form-control" id="subject" name="_subject" required data-validation-required-message="Please enter the subject of the message." >
+                                    <p class="help-block"></p>
+                                </div>
+                            </div>
+							
                             <div class="control-group form-group">
                                 <div class="controls">
                                     <label>Email Address:</label>
                                     <input type="email" class="form-control" id="email" name="_replyto" required data-validation-required-message="Please enter your email address.">
                                 </div>
                             </div>
+							
+							<div class="control-group form-group">
+                                <div class="controls">
+                                    <label>Website:</label>
+                                    <input type="text" class="form-control" id="website" >
+                                    <p class="help-block"></p>
+                                </div>
+                            </div>
+							
                             <div class="control-group form-group">
                                 <div class="controls">
                                     <label>Message:</label>
                                     <textarea name="message" rows="10" cols="100" class="form-control" id="message" required data-validation-required-message="Please enter your message" maxlength="999" style="resize:none"></textarea>
                                 </div>
                             </div>
+							 <input type="hidden" name="_next" value="emailsent.html" />
+							 <input type="text" name="_gotcha" style="display:none" />
                             <div id="success"></div>
                             <!-- For success/fail messages -->
                             <button type="submit" class="btn btn-primary" value="Send" >Send Message</button>
+							
                         </form>
-						<script>
-    var contactform =  document.getElementById('contactform');
-    contactform.setAttribute('action', 'https://formspree.io/dev@adibarbu.ro');
-</script>
+
                     </div>
 
 
@@ -189,7 +207,7 @@
     </footer>
 
     <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
+  
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
