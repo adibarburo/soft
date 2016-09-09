@@ -1,4 +1,4 @@
-function createCookie(name, value, expiresdays, path){
+function createCookie(name, value, expiresdays, path, domain){
 	
 	var d = new Date();
     d.setTime(d.getTime() + (expiresdays*24*60*60*1000));
@@ -6,7 +6,8 @@ function createCookie(name, value, expiresdays, path){
 	
     document.cookie= name + "=" + escape(value) +
     ((expires) ? "; expires=" + expires : "") +
-    (( path ) ? "; path=" + path : "" );
+    (( path ) ? "; path=" + path : "" ) +
+	((domain) ? "; domain=" + domain : "");
 }
 
 function setCookie(cname,cvalue,exdays) {
@@ -41,7 +42,7 @@ function checkCookie() {
 }
 
 function allowCookies() {
-    createCookie("cookieconsent_dismissed", "y", 365, "/");
+    createCookie("cookieconsent_dismissed", "y", 365, "/", "softlab.adibarbu.ro");
 	document.getElementById('eucookies').style.display = "none";
 }
 
