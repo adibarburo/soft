@@ -34,14 +34,14 @@ function getCookie(cname) {
 
 
 function checkCookie() {
-    var cookies=getCookie("cookieconsent_dismissed2");
+    var cookies=getCookie("cookieconsent_dismissed");
     if (cookies == "") {     
 	document.getElementById('eucookies').style.display = 'block';
     }
 }
 
 function allowCookies() {
-    createCookie("cookieconsent_dismissed2", "y", 365, "/");
+    createCookie("cookieconsent_dismissed", "y", 365, "/");
 	document.getElementById('eucookies').style.display = "none";
 }
 
